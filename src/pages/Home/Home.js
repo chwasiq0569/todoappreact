@@ -28,7 +28,7 @@ const Home = () => {
         </div>
 
         {todos.map((todo) => (
-          <div className="todo">
+          <div className="todo" onClick={() => navigate("/update/" + todo._id)}>
             <p>{todo.title}</p>
             <div>
               <img
