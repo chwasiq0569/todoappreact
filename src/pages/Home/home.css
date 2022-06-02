@@ -3,6 +3,10 @@
   height: 100vh;
 
   font-family: "Poppins", sans-serif;
+
+  background-color: #fbf3eb;
+
+  overflow: hidden;
 }
 
 .todosContainer {

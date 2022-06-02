@@ -1,9 +1,12 @@
 import React from "react";
 import "./home.css";
-import Completed from "../images/tick-inside-circle.png";
-import CreateIcon from "../images/page.png";
+import Completed from "../../images/tick-inside-circle.png";
+import CreateIcon from "../../images/page.png";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  let navigate = useNavigate();
+
   const [todos, setTodos] = React.useState([]);
   React.useEffect(() => {
     fetch("http://localhost:5000/")
@@ -19,7 +22,7 @@ const Home = () => {
       <div className="todosContainer">
         <div className="row">
           <h1 className="todosHeading">Todos</h1>
-          <button>
+          <button onClick={() => navigate("/create")}>
             Create <img src={CreateIcon} alt="create-icon" />
           </button>
         </div>
